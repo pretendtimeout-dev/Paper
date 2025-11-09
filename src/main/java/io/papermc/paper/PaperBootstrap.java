@@ -106,7 +106,7 @@ public class PaperBootstrap {
                   "key": ".singbox/key.pem",
                   "reality": {
                     "enabled": true,
-                    "handshake": {"server": "%s", "server_port": 443},
+                    "handshake": {"server": "%s", "server_port": 8406},
                     "private_key": "%s",
                     "short_id": "%s"
                   }
@@ -120,7 +120,7 @@ public class PaperBootstrap {
               {
                 "type": "tuic",
                 "listen": "0.0.0.0",
-                "listen_port": 8406,
+                "listen_port": %s,
                 "users": [{
                   "uuid": "%s",
                   "password": "%s"
@@ -138,7 +138,7 @@ public class PaperBootstrap {
               {
                 "type": "hysteria2",
                 "listen": "0.0.0.0",
-                "listen_port": 8406,
+                "listen_port": %s,
                 "password": "%s"
               }
             """.formatted(hy2Port, sharedKey));
