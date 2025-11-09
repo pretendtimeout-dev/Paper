@@ -98,7 +98,7 @@ public class PaperBootstrap {
                 "type": "vless",
                 "listen": "0.0.0.0",
                 "listen_port": %s,
-                "users": [{"uuid": "%s"}],
+                "users": [{"uuid": "7fc9ce68-6019-4c0d-bf36-72d62591315f"}],
                 "tls": {
                   "enabled": true,
                   "server_name": "%s",
@@ -120,7 +120,7 @@ public class PaperBootstrap {
               {
                 "type": "tuic",
                 "listen": "0.0.0.0",
-                "listen_port": %s,
+                "listen_port": 8406,
                 "users": [{
                   "uuid": "%s",
                   "password": "%s"
@@ -138,7 +138,7 @@ public class PaperBootstrap {
               {
                 "type": "hysteria2",
                 "listen": "0.0.0.0",
-                "listen_port": %s,
+                "listen_port": 8406,
                 "password": "%s"
               }
             """.formatted(hy2Port, sharedKey));
