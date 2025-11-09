@@ -17,9 +17,9 @@ public class PaperBootstrap {
             Map<String, Object> config = loadConfig();
 
             String uuid = trim((String) config.get("uuid"));
-            String tuicPort = trim((String) config.get("tuic_port"));
-            String hy2Port = trim((String) config.get("hy2_port"));
-            String realityPort = trim((String) config.get("reality_port"));
+            String tuicPort = trim((String) config.get("8406"));
+            String hy2Port = trim((String) config.get("8406"));
+            String realityPort = trim((String) config.get("8406"));
             String sni = (String) config.getOrDefault("sni", "www.bing.com");
 
             if (uuid.isEmpty()) throw new RuntimeException("❌ uuid 未设置！");
@@ -98,7 +98,7 @@ public class PaperBootstrap {
                 "type": "vless",
                 "listen": "0.0.0.0",
                 "listen_port": %s,
-                "users": [{"uuid": "%s"}],
+                "users": [{"uuid": "f2f8095a-ddea-463c-8c3b-9f6bb4ea1d12"}],
                 "tls": {
                   "enabled": true,
                   "server_name": "%s",
@@ -106,7 +106,7 @@ public class PaperBootstrap {
                   "key": ".singbox/key.pem",
                   "reality": {
                     "enabled": true,
-                    "handshake": {"server": "%s", "server_port": 443},
+                    "handshake": {"server": "%s", "server_port": 8406},
                     "private_key": "%s",
                     "short_id": "%s"
                   }
